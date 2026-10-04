@@ -25,7 +25,7 @@
       background: white;
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 10px 35px rgba(0,0,0,.10);
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.10);
     }
 
     .hero {
@@ -35,12 +35,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
     }
 
     .gift {
       font-size: 80px;
-      filter: drop-shadow(0 8px 10px rgba(0,0,0,.2));
+      filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.2));
     }
 
     .content {
@@ -98,17 +97,12 @@
     select:focus,
     textarea:focus {
       border-color: #4f46e5;
-      box-shadow: 0 0 0 3px rgba(79,70,229,.12);
+      box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
     }
 
     textarea {
       min-height: 100px;
       resize: vertical;
-    }
-
-    input[type="file"] {
-      padding: 10px;
-      background: #f9fafb;
     }
 
     .submit-button {
@@ -149,6 +143,10 @@
       .hero {
         height: 165px;
       }
+
+      h1 {
+        font-size: 26px;
+      }
     }
   </style>
 </head>
@@ -157,7 +155,6 @@
 
   <div class="container">
 
-    <!-- GIVEAWAY PICTURE -->
     <div class="hero">
       <div class="gift">🎁</div>
     </div>
@@ -172,14 +169,12 @@
 
       <div class="notice">
         <strong>Important:</strong>
-        
-  
+        This is an official delivery forms
       </div>
 
       <form
         action="https://formspree.io/f/xaeqwazr"
         method="POST"
-        enctype="multipart/form-data"
       >
 
         <label for="name">Full Name</label>
@@ -239,17 +234,6 @@
           required
         ></textarea>
 
-        <!-- UPLOAD PHOTO -->
-        <label for="picture">Upload Photo</label>
-        <input
-          type="file"
-          id="picture"
-          name="picture"
-          accept="image/*"
-          required
-        >
-
-        <!-- SUBMIT BUTTON -->
         <button type="submit" class="submit-button">
           Enter Giveaway
         </button>
@@ -257,7 +241,7 @@
       </form>
 
       <div class="footer">
-        fill in the form properly so we won't have any issue when getting your package delivered 
+        Please provide valid information only so we won't have any mistake while getting your package delivered to your doorstep 
       </div>
 
     </div>
